@@ -1,9 +1,32 @@
-<label>Choose a flower:</label>
+<div>
+    <label>Choose a flower:</label>
+    <select>
+        <option disabled selected value>Flower Types</option>
+        {% for flower in flowers %}
+            <option>{{ flower }}</option>
+        {% endfor %}
+    </select>
+</div>
 
-<select>
-    <option disabled selected value>Flower Types</option>
-    {% for flower in flowers %}
-        <option>{{ flower }}</option>
-    {% endfor %}
-</select>
-
+<div>
+    <label>Choose First Plant Genes:</label>
+    <select class='red'>
+    </select>
+    <select class='yellow-orange'>
+    </select>
+    <select class='white'>
+    </select>
+    <select class='special'>
+    </select>
+</div>
+<div>
+    <label>Choose Second Plant Genes:</label>
+    <select class='red'>
+    </select>
+    <select class='yellow-orange'>
+    </select>
+    <select class='white'>
+    </select>
+    <select class='special'>
+    </select>
+</div>
