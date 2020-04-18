@@ -2,12 +2,10 @@
 
 <select>
     <option disabled selected value>Flower Types</option>
-    <option>Cosmos</option>
-    <option>Hyacinths</option>
-    <option>Lilies</option>
-    <option>Mums</option>
-    <option>Pansies</option>
-    <option>Roses</option>
-    <option>Tulips</option>
-    <option>Windflowers</option>
 </select>
+
+{% for flower in flowers %}
+    <div>
+    This is a {{ flower }}
+    </div>
+{% endfor %}
