@@ -2,10 +2,8 @@
 
 <select>
     <option disabled selected value>Flower Types</option>
+    {% for flower in flowers %}
+        <option>{{ flower }}</option>
+    {% endfor %}
 </select>
 
-{% for flower in flowers %}
-    <div>
-    This is a {{ flower }}
-    </div>
-{% endfor %}
