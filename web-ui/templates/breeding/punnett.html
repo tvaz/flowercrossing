@@ -1,32 +1,71 @@
-<div>
-    <label>Choose a flower:</label>
-    <select>
-        <option disabled selected value>Flower Types</option>
-        {% for flower in flowers %}
-            <option>{{ flower }}</option>
-        {% endfor %}
-    </select>
-</div>
+<!DOCTYPE html>
+    <head>
+        <script>
+            window.onload = function() {
+                document.getElementById("select-flower").addEventListener(
+                    'change',
+                    function(e) {
+                        ha(e,'first-parent', 'second-parent');
+                    }, false);
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Choose a flower:</label>
+            <select id="select-flower">
+                <option disabled selected value>Flower Types</option>
+                {% for flower, value in flowers.items %}
+                    <option value={{ value }}>{{ flower }}</option>
+                {% endfor %}
+            </select>
+        </div>
 
-<div>
-    <label>Choose First Plant Genes:</label>
-    <select class='red'>
-    </select>
-    <select class='yellow-orange'>
-    </select>
-    <select class='white'>
-    </select>
-    <select class='special'>
-    </select>
-</div>
-<div>
-    <label>Choose Second Plant Genes:</label>
-    <select class='red'>
-    </select>
-    <select class='yellow-orange'>
-    </select>
-    <select class='white'>
-    </select>
-    <select class='special'>
-    </select>
-</div>
+        <div id="first-parent">
+            <label>Choose First Plant Genes:</label>
+            <select class='red'>
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+            <select class='yellow-orange'>
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+            <select class='white' hidden>
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+            <select class='special' hidden>
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+        </div>
+        <div id="second-parent">
+            <label>Choose Second Plant Genes:</label>
+            <select class='red'>
+                <option></option>
+                <option></option>
+                <option></option>
+            </select>
+            <select class='yellow-orange'>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+            </select>
+            <select class='white' hidden>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+            </select>
+            <select class='special' hidden>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+            </select>
+        </div>
+    </body>
+</html>
